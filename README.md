@@ -78,6 +78,8 @@ A recruitment management platform designed to connect job seekers, recruiters, a
 
 **Tech:** Laravel • PHP • MySQL • Blade • Tailwind CSS • JavaScript
 
+🔗 [Live Demo](https://smarthire-job-portal-mi61.onrender.com/)
+
 ---
 
 ### 🌐 Developer Portfolio
@@ -85,6 +87,9 @@ A recruitment management platform designed to connect job seekers, recruiters, a
 A personal portfolio showcasing my skills, projects, experience, and development journey.
 
 **Tech:** Laravel • PHP • MySQL • Blade • Tailwind CSS • JavaScript
+
+🔗 [Live Demo](https://myportfolio-ff39.onrender.com/)
+
 
 ---
 
