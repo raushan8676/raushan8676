@@ -1,0 +1,90 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#0d0e16"/>
+    <rect width="100%" height="100%" fill="url(#dots)"/>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&amp;family=Fira+Code:wght@400;600&amp;display=swap');
+    :root {
+        --bg-main: #0d0e16;
+        --accent-cyan: #22d3ee;
+        --accent-violet: #a78bfa;
+        --accent-pink: #f472b6;
+        --text-primary: #f6f7ff;
+        --text-secondary: #858aa6;
+        --card-bg: #111321;
+    }
+    .text-primary { fill: var(--text-primary); font-family: 'Outfit', sans-serif; }
+    .text-secondary { fill: var(--text-secondary); font-family: 'Outfit', sans-serif; }
+    .text-mono { fill: var(--accent-cyan); font-family: 'Fira Code', monospace; }
+    .heading { font-weight: 800; font-size: 32px; font-family: 'Outfit', sans-serif; }
+    .subheading { font-weight: 600; font-size: 20px; font-family: 'Outfit', sans-serif; }
+    
+    .card { fill: var(--card-bg); stroke: url(#border-gradient); stroke-width: 1px; rx: 16px; ry: 16px; }
+    
+    .glow { filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.3)); }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(1.05); }
+    }
+    .anim-pulse { animation: pulse 3s infinite ease-in-out; }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    .anim-float { animation: float 6s infinite ease-in-out; }
+</style>
+<defs>
+    <linearGradient id="border-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5"/>
+        <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="#f472b6" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#22d3ee" />
+        <stop offset="50%" stop-color="#a78bfa" />
+        <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r="1.5" fill="#858aa6" opacity="0.1"/>
+    </pattern>
+</defs>
+    
+    <defs>
+        <clipPath id="avatar-clip">
+            <circle cx="150" cy="200" r="100"/>
+        </clipPath>
+    </defs>
+    
+    <!-- Left Section: Avatar -->
+    <g class="anim-float">
+        <rect x="30" y="80" width="240" height="240" rx="120" fill="none" stroke="url(#border-gradient)" stroke-width="4" stroke-dasharray="10 10"/>
+        <circle cx="150" cy="200" r="100" fill="#111321" stroke="#a78bfa" stroke-width="2"/>
+        <!-- User can replace href with their base64 image or keep myimg.png -->
+        <image href="myimg.png" x="50" y="100" width="200" height="200" clip-path="url(#avatar-clip)" preserveAspectRatio="xMidYMid slice" />
+    </g>
+
+    <!-- Right Section: Text -->
+    <g transform="translate(340, 80)">
+        <rect x="0" y="0" width="230" height="30" rx="15" fill="#111321" stroke="#22d3ee" stroke-width="1"/>
+        <circle cx="20" cy="15" r="5" fill="#22d3ee" class="anim-pulse"/>
+        <text x="35" y="20" class="text-primary" font-size="12" font-weight="600">Software Developer Trainee</text>
+        
+        <text x="0" y="70" class="text-secondary" font-size="20">Hi, I'm</text>
+        <text x="0" y="120" class="heading" fill="url(#text-gradient)" font-size="48">Raushan Kumar</text>
+        
+        <g transform="translate(0, 160)">
+            <text class="text-mono" font-size="16">
+                <animate attributeName="opacity" values="1;0;1" dur="6s" repeatCount="indefinite" />
+                > Laravel &amp; PHP | Full-Stack Developer
+            </text>
+        </g>
+        
+        <text x="0" y="200" class="text-secondary" font-size="14">I build practical web applications using Laravel,</text>
+        <text x="0" y="220" class="text-secondary" font-size="14">PHP, React.js, MySQL, and JavaScript.</text>
+        
+        <text x="0" y="260" class="text-secondary" font-size="14">Currently focused on building real-world applications,</text>
+        <text x="0" y="280" class="text-secondary" font-size="14">improving backend architecture, working with REST APIs,</text>
+        <text x="0" y="300" class="text-secondary" font-size="14">and developing clean and responsive user interfaces.</text>
+    </g>
+</svg>

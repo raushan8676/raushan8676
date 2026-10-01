@@ -1,0 +1,105 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#0d0e16"/>
+    <rect width="100%" height="100%" fill="url(#dots)"/>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&amp;family=Fira+Code:wght@400;600&amp;display=swap');
+    :root {
+        --bg-main: #0d0e16;
+        --accent-cyan: #22d3ee;
+        --accent-violet: #a78bfa;
+        --accent-pink: #f472b6;
+        --text-primary: #f6f7ff;
+        --text-secondary: #858aa6;
+        --card-bg: #111321;
+    }
+    .text-primary { fill: var(--text-primary); font-family: 'Outfit', sans-serif; }
+    .text-secondary { fill: var(--text-secondary); font-family: 'Outfit', sans-serif; }
+    .text-mono { fill: var(--accent-cyan); font-family: 'Fira Code', monospace; }
+    .heading { font-weight: 800; font-size: 32px; font-family: 'Outfit', sans-serif; }
+    .subheading { font-weight: 600; font-size: 20px; font-family: 'Outfit', sans-serif; }
+    
+    .card { fill: var(--card-bg); stroke: url(#border-gradient); stroke-width: 1px; rx: 16px; ry: 16px; }
+    
+    .glow { filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.3)); }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(1.05); }
+    }
+    .anim-pulse { animation: pulse 3s infinite ease-in-out; }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    .anim-float { animation: float 6s infinite ease-in-out; }
+</style>
+<defs>
+    <linearGradient id="border-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5"/>
+        <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="#f472b6" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#22d3ee" />
+        <stop offset="50%" stop-color="#a78bfa" />
+        <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r="1.5" fill="#858aa6" opacity="0.1"/>
+    </pattern>
+</defs>
+    
+    <g transform="translate(40, 50)">
+        <text x="0" y="0" class="heading" fill="url(#text-gradient)">🛠️ Tech Stack</text>
+        <rect x="0" y="15" width="50" height="3" fill="#22d3ee"/>
+        
+        <g transform="translate(0, 50)">
+            <text x="0" y="0" class="text-primary" font-size="18" font-weight="600">Backend</text>
+            <rect x="0" y="15" width="60" height="24" rx="4" fill="#111321" stroke="#22d3ee" stroke-width="1"/>
+            <text x="30" y="32" class="text-primary" font-size="12" text-anchor="middle">PHP</text>
+            <rect x="70" y="15" width="70" height="24" rx="4" fill="#111321" stroke="#a78bfa" stroke-width="1"/>
+            <text x="105" y="32" class="text-primary" font-size="12" text-anchor="middle">Laravel</text>
+            <rect x="150" y="15" width="80" height="24" rx="4" fill="#111321" stroke="#f472b6" stroke-width="1"/>
+            <text x="190" y="32" class="text-primary" font-size="12" text-anchor="middle">REST API</text>
+            <rect x="240" y="15" width="50" height="24" rx="4" fill="#111321" stroke="#22d3ee" stroke-width="1"/>
+            <text x="265" y="32" class="text-primary" font-size="12" text-anchor="middle">MVC</text>
+            <rect x="300" y="15" width="100" height="24" rx="4" fill="#111321" stroke="#a78bfa" stroke-width="1"/>
+            <text x="350" y="32" class="text-primary" font-size="12" text-anchor="middle">Eloquent ORM</text>
+        </g>
+
+        <g transform="translate(0, 120)">
+            <text x="0" y="0" class="text-primary" font-size="18" font-weight="600">Frontend</text>
+            <rect x="0" y="15" width="70" height="24" rx="4" fill="#111321" stroke="#22d3ee" stroke-width="1"/>
+            <text x="35" y="32" class="text-primary" font-size="12" text-anchor="middle">HTML5</text>
+            <rect x="80" y="15" width="60" height="24" rx="4" fill="#111321" stroke="#a78bfa" stroke-width="1"/>
+            <text x="110" y="32" class="text-primary" font-size="12" text-anchor="middle">CSS3</text>
+            <rect x="150" y="15" width="90" height="24" rx="4" fill="#111321" stroke="#f472b6" stroke-width="1"/>
+            <text x="195" y="32" class="text-primary" font-size="12" text-anchor="middle">JavaScript</text>
+            <rect x="250" y="15" width="80" height="24" rx="4" fill="#111321" stroke="#22d3ee" stroke-width="1"/>
+            <text x="290" y="32" class="text-primary" font-size="12" text-anchor="middle">React.js</text>
+            <rect x="340" y="15" width="100" height="24" rx="4" fill="#111321" stroke="#a78bfa" stroke-width="1"/>
+            <text x="390" y="32" class="text-primary" font-size="12" text-anchor="middle">Tailwind CSS</text>
+        </g>
+        
+        <g transform="translate(0, 190)">
+            <text x="0" y="0" class="text-primary" font-size="18" font-weight="600">Database</text>
+            <rect x="0" y="15" width="70" height="24" rx="4" fill="#111321" stroke="#22d3ee" stroke-width="1"/>
+            <text x="35" y="32" class="text-primary" font-size="12" text-anchor="middle">MySQL</text>
+            <rect x="80" y="15" width="50" height="24" rx="4" fill="#111321" stroke="#a78bfa" stroke-width="1"/>
+            <text x="105" y="32" class="text-primary" font-size="12" text-anchor="middle">SQL</text>
+        </g>
+        
+        <g transform="translate(0, 260)">
+            <text x="0" y="0" class="text-primary" font-size="18" font-weight="600">Tools</text>
+            <rect x="0" y="15" width="50" height="24" rx="4" fill="#111321" stroke="#22d3ee" stroke-width="1"/>
+            <text x="25" y="32" class="text-primary" font-size="12" text-anchor="middle">Git</text>
+            <rect x="60" y="15" width="70" height="24" rx="4" fill="#111321" stroke="#a78bfa" stroke-width="1"/>
+            <text x="95" y="32" class="text-primary" font-size="12" text-anchor="middle">GitHub</text>
+            <rect x="140" y="15" width="70" height="24" rx="4" fill="#111321" stroke="#f472b6" stroke-width="1"/>
+            <text x="175" y="32" class="text-primary" font-size="12" text-anchor="middle">Postman</text>
+            <rect x="220" y="15" width="80" height="24" rx="4" fill="#111321" stroke="#22d3ee" stroke-width="1"/>
+            <text x="260" y="32" class="text-primary" font-size="12" text-anchor="middle">VS Code</text>
+        </g>
+    </g>
+</svg>

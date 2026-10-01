@@ -1,0 +1,106 @@
+<svg width="800" height="420" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#0d0e16"/>
+    <rect width="100%" height="100%" fill="url(#dots)"/>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&amp;family=Fira+Code:wght@400;600&amp;display=swap');
+    :root {
+        --bg-main: #0d0e16;
+        --accent-cyan: #22d3ee;
+        --accent-violet: #a78bfa;
+        --accent-pink: #f472b6;
+        --text-primary: #f6f7ff;
+        --text-secondary: #858aa6;
+        --card-bg: #111321;
+    }
+    .text-primary { fill: var(--text-primary); font-family: 'Outfit', sans-serif; }
+    .text-secondary { fill: var(--text-secondary); font-family: 'Outfit', sans-serif; }
+    .text-mono { fill: var(--accent-cyan); font-family: 'Fira Code', monospace; }
+    .heading { font-weight: 800; font-size: 32px; font-family: 'Outfit', sans-serif; }
+    .subheading { font-weight: 600; font-size: 20px; font-family: 'Outfit', sans-serif; }
+    
+    .card { fill: var(--card-bg); stroke: url(#border-gradient); stroke-width: 1px; rx: 16px; ry: 16px; }
+    
+    .glow { filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.3)); }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(1.05); }
+    }
+    .anim-pulse { animation: pulse 3s infinite ease-in-out; }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    .anim-float { animation: float 6s infinite ease-in-out; }
+</style>
+<defs>
+    <linearGradient id="border-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5"/>
+        <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="#f472b6" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#22d3ee" />
+        <stop offset="50%" stop-color="#a78bfa" />
+        <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r="1.5" fill="#858aa6" opacity="0.1"/>
+    </pattern>
+</defs>
+    
+    <g transform="translate(40, 50)">
+        <text x="0" y="0" class="heading" fill="url(#text-gradient)">🚀 Featured Projects</text>
+        <rect x="0" y="15" width="50" height="3" fill="#22d3ee"/>
+        
+        <g transform="translate(0, 40)">
+            <!-- Project 1 -->
+            <g transform="translate(0, 0)">
+                <rect class="card" x="0" y="0" width="220" height="260"/>
+                <text x="20" y="30" class="text-primary" font-size="16" font-weight="600">🛒 Laravel E-Commerce</text>
+                <text x="20" y="55" class="text-secondary" font-size="12">Full-stack e-commerce app</text>
+                
+                <text x="20" y="90" class="text-secondary" font-size="12">• Product &amp; Category</text>
+                <text x="20" y="110" class="text-secondary" font-size="12">• Shopping cart &amp; Wishlist</text>
+                <text x="20" y="130" class="text-secondary" font-size="12">• Authentication</text>
+                <text x="20" y="150" class="text-secondary" font-size="12">• Order management</text>
+                
+                <text x="20" y="190" class="text-mono" font-size="10">Laravel PHP MySQL Blade Tailwind</text>
+                <rect x="20" y="210" width="80" height="24" rx="4" fill="#22d3ee" fill-opacity="0.2" stroke="#22d3ee" stroke-width="1"/>
+                <text x="60" y="226" class="text-primary" font-size="12" text-anchor="middle">Live Demo</text>
+            </g>
+            
+            <!-- Project 2 -->
+            <g transform="translate(250, 0)">
+                <rect class="card" x="0" y="0" width="220" height="260"/>
+                <text x="20" y="30" class="text-primary" font-size="16" font-weight="600">💼 SmartHire — Job Portal</text>
+                <text x="20" y="55" class="text-secondary" font-size="12">Recruitment management</text>
+                
+                <text x="20" y="90" class="text-secondary" font-size="12">• Job seeker registration</text>
+                <text x="20" y="110" class="text-secondary" font-size="12">• Recruiter management</text>
+                <text x="20" y="130" class="text-secondary" font-size="12">• Job posting</text>
+                <text x="20" y="150" class="text-secondary" font-size="12">• Role-based access</text>
+                
+                <text x="20" y="190" class="text-mono" font-size="10">Laravel PHP MySQL Blade Tailwind</text>
+                <rect x="20" y="210" width="80" height="24" rx="4" fill="#22d3ee" fill-opacity="0.2" stroke="#22d3ee" stroke-width="1"/>
+                <text x="60" y="226" class="text-primary" font-size="12" text-anchor="middle">Live Demo</text>
+            </g>
+
+            <!-- Project 3 -->
+            <g transform="translate(500, 0)">
+                <rect class="card" x="0" y="0" width="220" height="260"/>
+                <text x="20" y="30" class="text-primary" font-size="16" font-weight="600">🌐 Developer Portfolio</text>
+                <text x="20" y="55" class="text-secondary" font-size="12">Personal portfolio</text>
+                
+                <text x="20" y="90" class="text-secondary" font-size="12">Showcasing my skills,</text>
+                <text x="20" y="110" class="text-secondary" font-size="12">projects, experience,</text>
+                <text x="20" y="130" class="text-secondary" font-size="12">and development journey.</text>
+                
+                <text x="20" y="190" class="text-mono" font-size="10">Laravel PHP MySQL Blade Tailwind</text>
+                <rect x="20" y="210" width="80" height="24" rx="4" fill="#22d3ee" fill-opacity="0.2" stroke="#22d3ee" stroke-width="1"/>
+                <text x="60" y="226" class="text-primary" font-size="12" text-anchor="middle">Live Demo</text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,66 @@
+<svg width="800" height="350" viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#0d0e16"/>
+    <rect width="100%" height="100%" fill="url(#dots)"/>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&amp;family=Fira+Code:wght@400;600&amp;display=swap');
+    :root {
+        --bg-main: #0d0e16;
+        --accent-cyan: #22d3ee;
+        --accent-violet: #a78bfa;
+        --accent-pink: #f472b6;
+        --text-primary: #f6f7ff;
+        --text-secondary: #858aa6;
+        --card-bg: #111321;
+    }
+    .text-primary { fill: var(--text-primary); font-family: 'Outfit', sans-serif; }
+    .text-secondary { fill: var(--text-secondary); font-family: 'Outfit', sans-serif; }
+    .text-mono { fill: var(--accent-cyan); font-family: 'Fira Code', monospace; }
+    .heading { font-weight: 800; font-size: 32px; font-family: 'Outfit', sans-serif; }
+    .subheading { font-weight: 600; font-size: 20px; font-family: 'Outfit', sans-serif; }
+    
+    .card { fill: var(--card-bg); stroke: url(#border-gradient); stroke-width: 1px; rx: 16px; ry: 16px; }
+    
+    .glow { filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.3)); }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(1.05); }
+    }
+    .anim-pulse { animation: pulse 3s infinite ease-in-out; }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    .anim-float { animation: float 6s infinite ease-in-out; }
+</style>
+<defs>
+    <linearGradient id="border-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5"/>
+        <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="#f472b6" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#22d3ee" />
+        <stop offset="50%" stop-color="#a78bfa" />
+        <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r="1.5" fill="#858aa6" opacity="0.1"/>
+    </pattern>
+</defs>
+    
+    <g transform="translate(40, 50)">
+        <text x="0" y="0" class="heading" fill="url(#text-gradient)">🧑‍💻 About Me</text>
+        <rect x="0" y="15" width="50" height="3" fill="#22d3ee"/>
+        
+        <g transform="translate(0, 50)">
+            <text x="0" y="0" class="text-secondary" font-size="16">💼 Software Developer Trainee</text>
+            <text x="0" y="35" class="text-secondary" font-size="16">🔭 Currently building full-stack web applications</text>
+            <text x="0" y="70" class="text-secondary" font-size="16">🌱 Improving my skills in Laravel, React &amp; backend development</text>
+            <text x="0" y="105" class="text-secondary" font-size="16">🛠️ Interested in scalable web applications and clean code</text>
+            <text x="0" y="140" class="text-secondary" font-size="16">💡 Enjoy solving problems and learning new technologies</text>
+            <text x="0" y="175" class="text-secondary" font-size="16">🎯 Looking for Laravel / PHP / Full-Stack Developer opportunities</text>
+        </g>
+    </g>
+</svg>
